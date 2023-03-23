@@ -17,7 +17,7 @@ data class Post(
     val copyRight: String?, // источник материала
     val postType: String = "text", // тип записи
     val postSource: String = "text", // способ размещения
-    val comments: Comment = Comment(0, 2),
+    val comments: Comment = Comment(1, 2),
     val likes: Like = Like(0, false, true, true),
     val reposts: Repost? = Repost(0, true),
     val views: View,

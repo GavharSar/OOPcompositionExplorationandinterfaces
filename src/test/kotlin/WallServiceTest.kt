@@ -54,4 +54,36 @@ class WallServiceTest {
         WallService.add(post)
         WallService.createComment(5, comment = Comment(3,4))
     }
+
+    @Test
+    fun negativeCommentNotificationAdd() {
+        var post2 = Post(4,7,3, replyOwnerId = 5, replyPostId = 6, authorName = "Petya", copyRight = "post", views = View(10))
+        WallService.add(post2)
+        WallService.createComment(4, comment = Comment(1, 2))
+        val reportComment = ReportComment(2, 3, 0)
+    } // не работает
+
+    @Test(expected = NotCommentIdException::class)
+    fun negativeCommentNotificationNotCommentId() {
+        var post2 = Post(4,7,3, replyOwnerId = 5, replyPostId = 6, authorName = "Petya", copyRight = "post", views = View(10))
+        WallService.add(post2)
+        WallService.createComment(4, comment = Comment(1, 2))
+        val reportComment = ReportComment(2, 2, 0)
+    } // не работает
+
+    @Test(expected = NotOwnerIdException::class)
+    fun negativeCommentNotificationNotOwnerId() {
+        var post2 = Post(4,7,3, replyOwnerId = 5, replyPostId = 6, authorName = "Petya", copyRight = "post", views = View(10))
+        WallService.add(post2)
+        WallService.createComment(4, comment = Comment(1, 2))
+        val reportComment = ReportComment(1, 3, 0)
+    } // не работает
+
+    @Test(expected = NotReasonException::class)
+    fun negativeCommentNotificationNotReason() {
+        var post2 = Post(4,7,3, replyOwnerId = 5, replyPostId = 6, authorName = "Petya", copyRight = "post", views = View(10))
+        WallService.add(post2)
+        WallService.createComment(4, comment = Comment(1, 2))
+        val reportComment = ReportComment(1, 3, 9)
+    } // не работает
 }

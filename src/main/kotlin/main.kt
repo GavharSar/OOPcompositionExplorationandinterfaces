@@ -20,7 +20,7 @@ fun main() {
 
     WallService.createComment(4, comment = Comment(1, 2))
 
-    val reportCommentcomment = ReportComment(2, 2, 0)
-    println(WallService.negativeCommentNotification(reportCommentcomment))
+    val reportComment = ReportComment(1, 2, 0)
+    println(WallService.negativeCommentNotification(reportComment))
 
 }

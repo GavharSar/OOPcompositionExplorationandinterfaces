@@ -45,22 +45,16 @@ object WallService {
     }
 
     fun negativeCommentNotification(reportComment: ReportComment): Int {
-        for (comment in comments) {
-            try {
-                if (comment.ownerId == reportComment.ownerId && comment.id == reportComment.commentId && reportComment.reason >= 0 && reportComment.reason <= 8) {
-                    reportsComment += reportComment
-                    return 1
-                }
-            } catch (e: NotOwnerIdException) {
-                if (comment.ownerId != reportComment.ownerId) {
-                    return throw NotOwnerIdException("No comment with ${reportComment.ownerId}")
-                }
-            } catch (e: NotCommentIdException) {
-                if (comment.id != reportComment.commentId) {
-                    return throw NotCommentIdException("No comment with ${reportComment.commentId}")
-                }
-            }
+        if (comments.firstOrNull { it.id == reportComment.commentId } == null) {
+            throw NotCommentIdException("No comment with ${reportComment.commentId}")
         }
-        return throw NotReasonException("No reason with number ${reportComment.reason}")
+        if (comments.firstOrNull { it.ownerId == reportComment.ownerId } == null) {
+            throw NotOwnerIdException("No comment with ${reportComment.ownerId}")
+        }
+        if (reportComment.reason !in 0..8) {
+            throw NotReasonException("No reason with number ${reportComment.reason}")
+        }
+        reportsComment += reportComment
+        return 1
     }
 }
