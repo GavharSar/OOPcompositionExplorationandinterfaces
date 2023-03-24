@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b1ab0a7-cf87-4e5c-9b5d-d9d9bce5c16e" name="Changes" comment="exceptions">
+    <list default="true" id="8b1ab0a7-cf87-4e5c-9b5d-d9d9bce5c16e" name="Changes" comment="autotest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Post.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Post.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/WallService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/WallService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/kotlin/WallServiceTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/WallServiceTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +38,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="notes" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -234,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679478439087</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="autotest">
+      <created>1679582417053</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1679582417053</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -248,7 +252,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="notes" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>
@@ -265,6 +269,7 @@
     <MESSAGE value="Sealed-klass" />
     <MESSAGE value="&#10;exceptions" />
     <MESSAGE value="exceptions" />
-    <option name="LAST_COMMIT_MESSAGE" value="exceptions" />
+    <MESSAGE value="autotest" />
+    <option name="LAST_COMMIT_MESSAGE" value="autotest" />
   </component>
 </project>
