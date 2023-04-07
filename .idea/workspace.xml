@@ -4,8 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b1ab0a7-cf87-4e5c-9b5d-d9d9bce5c16e" name="Changes" comment="autotest">
+    <list default="true" id="8b1ab0a7-cf87-4e5c-9b5d-d9d9bce5c16e" name="Changes" comment="autotest edit">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/CrudServise.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/DeletedCommentException.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Note.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/NotesService.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/NotesServiceTest.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Attachments.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Attachments.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Post.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Post.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/PostObjects.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Objects.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/WallService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/WallService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/kotlin/WallServiceTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/WallServiceTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,14 +28,24 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin Object" />
-        <option value="JUnit4 Test Class" />
-        <option value="Kotlin Interface" />
-        <option value="Kotlin Class" />
         <option value="Kotlin File" />
+        <option value="Kotlin Interface" />
+        <option value="Kotlin Object" />
+        <option value="Kotlin Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -38,7 +58,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="notes" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -89,8 +109,8 @@
       <command value="gradle test" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.WallServiceTest.negativeCommentNotificationNotReason">
-    <configuration name="WallServiceTest.createCommentNotId" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.OOPcompositionExplorationandinterfaces [test]">
+    <configuration name="NotesServiceTest.deleteCommentDeletedCommentException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -103,7 +123,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ru.netology.WallServiceTest.createCommentNotId&quot;" />
+            <option value="&quot;NotesServiceTest.deleteCommentDeletedCommentException&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -113,7 +133,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="WallServiceTest.negativeCommentNotificationAdd" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="NotesServiceTest.editCommentFalseDel" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -126,7 +146,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ru.netology.WallServiceTest.negativeCommentNotificationAdd&quot;" />
+            <option value="&quot;NotesServiceTest.editCommentFalseDel&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -136,7 +156,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="WallServiceTest.negativeCommentNotificationNotCommentId" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="NotesServiceTest.restoreCommentFalseDeleted" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -149,7 +169,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ru.netology.WallServiceTest.negativeCommentNotificationNotCommentId&quot;" />
+            <option value="&quot;NotesServiceTest.restoreCommentFalseDeleted&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -159,7 +179,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="WallServiceTest.negativeCommentNotificationNotOwnerId" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="OOPcompositionExplorationandinterfaces [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -170,19 +190,17 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;ru.netology.WallServiceTest.negativeCommentNotificationNotOwnerId&quot;" />
+            <option value="test" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="WallServiceTest.negativeCommentNotificationNotReason" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="WallServiceTest.restoreCommentFalseD" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -195,7 +213,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ru.netology.WallServiceTest.negativeCommentNotificationNotReason&quot;" />
+            <option value="&quot;ru.netology.WallServiceTest.restoreCommentFalseD&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -207,11 +225,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.WallServiceTest.negativeCommentNotificationNotReason" />
-        <item itemvalue="Gradle.WallServiceTest.negativeCommentNotificationNotOwnerId" />
-        <item itemvalue="Gradle.WallServiceTest.negativeCommentNotificationNotCommentId" />
-        <item itemvalue="Gradle.WallServiceTest.negativeCommentNotificationAdd" />
-        <item itemvalue="Gradle.WallServiceTest.createCommentNotId" />
+        <item itemvalue="Gradle.NotesServiceTest.deleteCommentDeletedCommentException" />
+        <item itemvalue="Gradle.NotesServiceTest.restoreCommentFalseDeleted" />
+        <item itemvalue="Gradle.NotesServiceTest.editCommentFalseDel" />
+        <item itemvalue="Gradle.OOPcompositionExplorationandinterfaces [test]" />
+        <item itemvalue="Gradle.WallServiceTest.restoreCommentFalseD" />
       </list>
     </recent_temporary>
   </component>
@@ -252,7 +270,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="main" />
+                        <option value="notes" />
                       </list>
                     </value>
                   </entry>

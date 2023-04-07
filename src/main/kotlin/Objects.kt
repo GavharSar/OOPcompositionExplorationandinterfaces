@@ -1,12 +1,10 @@
 package ru.netology
 
-class Comment(
+data class Comment(
     val id: Int,
     val ownerId: Int,
-    val canPost: Boolean = true, // может ли пользователь комментировать запись
-    val groupsCanPost: Boolean = false, // могут ли сообщества комментировать запись
-    val canClose: Boolean = true, // может ли пользователь закрыть комментарии к записи
-    val canOpen: Boolean = true // может ли пользователь открыть комментарии к записи
+    val massage: String,
+    var deleted: Boolean = false
 )
 
 class Like(

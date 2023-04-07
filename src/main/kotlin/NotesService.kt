@@ -1,49 +1,47 @@
 package ru.netology
 
-object WallService : CrudServise<Post> {
-    private var posts = mutableListOf<Post>()
-    private var postsId = mutableSetOf<Int>() // private var lastId = 0
+object NotesService : CrudServise<Note> {
+    private var notes = mutableListOf<Note>()
+    private var notesId = mutableSetOf<Int>() // private var lastId = 0
     private var comments = emptyArray<Comment>()
-    private var reportsComment = emptyArray<ReportComment>()
 
-    override fun add(entity: Post): Int {
-        posts.add(entity) // posts += post.copy(id = ++lastId)
-        postsId.add(entity.id)
+    override fun add(entity: Note): Int {
+        notes.add(entity)
+        notesId.add(entity.id)
         return entity.id
     }
 
-    override fun edit(entity: Post): Boolean {
-        for ((index, post) in posts.withIndex()) {
-            if (post.id == entity.id) {
-                posts[index] = entity.copy()
+    override fun edit(entity: Note): Boolean {
+        for ((index, note) in notes.withIndex()) {
+            if (note.id == entity.id) {
+                notes[index] = entity.copy()
                 return true
             }
         }
         return false
     }
 
-    override fun getById(id: Int): Post {
-        for (post in posts) {
-            if (post.id == id) {
-                return post
+    override fun getById(id: Int): Note {
+        for (note in notes) {
+            if (note.id == id) {
+                return note
             }
         }
         return throw PostNotFoundException("No post with id $id")
     }
 
-    override fun get(): MutableList<Post> {
-        for (post in posts) {
-            println(post)
+    override fun get(): MutableList<Note> {
+        for (note in notes) {
+            println(note)
         }
         println("------------------")
-        return posts
+        return notes
     }
 
     override fun delete(id: Int): Boolean {
-        for (post in posts) {
-            if (post.id == id) {
-                posts.remove(post)
-                post.comment.clear()
+        for (note in notes) {
+            if (note.id == id) {
+                notes.remove(note)
                 return true
             }
         }
@@ -51,8 +49,8 @@ object WallService : CrudServise<Post> {
     }
 
     override fun createComment(id: Int, comment: Comment): Comment {
-        for (post in posts) {
-            if (id == post.id) {
+        for (note in notes) {
+            if (id == note.id) {
                 comments += comment
                 return comments.last()
             }
@@ -72,9 +70,9 @@ object WallService : CrudServise<Post> {
 
     override fun getComments(id: Int): MutableList<Comment> {
         var commentList = mutableListOf<Comment>()
-        for (post in posts) {
-            if (post.id == id) {
-                for (comment in post.comment) {
+        for (note in notes) {
+            if (note.id == id) {
+                for (comment in note.comment) {
                     if (comment.deleted == false) {
                         commentList.add(comment)
                     } else {
@@ -91,12 +89,14 @@ object WallService : CrudServise<Post> {
         if (comments.firstOrNull { it.id == id } == null) {
             throw NotCommentIdException("No comment with $id")
         }
-        if (comments.firstOrNull { it.deleted != true } == null) {
+        if (comments.firstOrNull { it.deleted == false } == null) {
             throw DeletedCommentException("It is deleted comment")
         }
         for ((index, comment) in comments.withIndex()) {
-            comments[index] = comment.copy(id, deleted = true)
-            return true
+            if (comment.id == id) {
+                comments[index] = comment.copy(id, deleted = true)
+                return true
+            }
         }
         return false
     }
@@ -111,23 +111,9 @@ object WallService : CrudServise<Post> {
         return false
     }
 
-    fun negativeCommentNotification(reportComment: ReportComment): Int {
-        if (comments.firstOrNull { it.id == reportComment.commentId } == null) {
-            throw NotCommentIdException("No comment with ${reportComment.commentId}")
-        }
-        if (comments.firstOrNull { it.ownerId == reportComment.ownerId } == null) {
-            throw NotOwnerIdException("No comment with ${reportComment.ownerId}")
-        }
-        if (reportComment.reason !in 0..8) {
-            throw NotReasonException("No reason with number ${reportComment.reason}")
-        }
-        reportsComment += reportComment
-        return 1
-    }
-
     fun clear() {
-        posts.clear()
-        postsId.clear() // lastId = 0
+        notes.clear()
+        notesId.clear() // lastId = 0
         comments = emptyArray<Comment>()
     }
 }

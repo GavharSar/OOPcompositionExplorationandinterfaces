@@ -1,6 +1,6 @@
 package ru.netology
 
-data class Post(
+data class Note(
     val id: Int, // айди записи
     val ownerId: Int?, // айди владельца стены, на которой размещена запись
     val authorId: Int, // айди автора
